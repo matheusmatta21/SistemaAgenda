@@ -19,13 +19,13 @@ def validarDados():
     numero = inputNumero.get()
     email = inputEmail.get()
     preferencial = comboboxPreferencial.get()
-    if nome == "" or nome == " ":
+    if nome.strip() == "" or nome.strip() == " ":
         messagebox.showerror(title="Erro", message="Digite um nome!")
         booleano = False
     elif numero == "" or numero == " " or numero.isnumeric() == False:
         messagebox.showerror(title="Erro", message="Digite um número!")
         booleano = False
-    elif email == "" or email == " ":
+    elif email.strip() == "" or email.strip() == " ":
         messagebox.showerror(title="Erro", message="Digite um email!")
         booleano = False
     elif "@" not in email and "." not in email:
